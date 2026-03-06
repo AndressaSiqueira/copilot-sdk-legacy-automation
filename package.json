@@ -1,0 +1,47 @@
+{
+  "name": "legacy-agent",
+  "version": "1.0.0",
+  "description": "CLI de automação de interfaces legadas usando GitHub Copilot SDK",
+  "main": "dist/cli.js",
+  "bin": {
+    "legacy-agent": "./dist/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "start:interactive": "node dist/cli.js --interactive",
+    "start:server": "node dist/cli.js --server",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext ts"
+  },
+  "keywords": [
+    "copilot",
+    "github",
+    "automation",
+    "legacy",
+    "browser",
+    "desktop",
+    "cli"
+  ],
+  "author": "Enterprise CI/CD Agents",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@github/copilot-sdk": "^0.1.30",
+    "ws": "^8.17.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.4.0"
+  }
+}
